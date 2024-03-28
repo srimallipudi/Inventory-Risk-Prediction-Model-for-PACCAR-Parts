@@ -1,0 +1,48 @@
+column_name,Target Variable,Description
+suggestion_dt,0,Date restocking was suggested
+expid,0,Inventory planning bucket code - Only including code 13 (Inside Leads)
+expid_desc,0,Description of the expid code - only including code 13 (Inside Leads)
+item_id,0,Part number ID  - Unique ID of parts sold by PACCAR Parts
+pdc,0,Paccar Distribution Center - These are the distribution warehouses that Paccar uses to pack and ship orders.  
+vndr_concat,0,Supplier ID - Unique ID that shows which supplier manufactured this part
+desk,0,Indicates what inventory planner purchased item_id
+velocity,0,"Category of frequently sold parts with '1' indicating most frequently ordered parts, letters indicate special model groups"
+part_cost,0,Unit selling price of the item_id
+spq,0,Standard Packaging Quantity - Indicates how many parts are in a box
+ord_min,0,Minimum units of item_id to order
+ord_mult,0,"Quantity interval you have to order the part in. E.g. if ord_mult is 5, you must order multiple of 5 parts"
+ord_dollar_min,0,Minimum dollar amount of item_id to order
+lead_time,0,Expected time from an order getting placed to the order getting shipped
+on_hand,0,Inventory of item_id found in the PDC
+on_order,0,"Amount of item_id currently ordered to restock a PDC, but hasn't been received yet"
+ss_units_left_pct,0,Safety Stock units left at the PDC. Safety Stock indicates the minimum quantity of an item_id that should always be available at the PDC. 
+max_oh_left_pct,0,Maximum theoretical inventory relative to current on hand quantity. On hand indicates the number of parts that are readily available to get shipped from a PDC
+days_on_hand,0,Days of inventory left at the PDC using the current daily forecast relative to current on hand
+oh_oo_sug_dos,0,"Days of inventory taking current on hand, on order and suggested amount"
+oo_dos,0,Days of inventory taking current on order quantity
+doh_less_ss,0,Indicates if on hand inventory is less than safety stock amount
+doh_to_ltm,0,Days on hand to lead time - days_on_hand/lead_time - <1 indicates we don't have enough inventory to cover the standard lead time. 
+oo_it_portion,0,Percent of on order inventory is in transit to our warehouse
+oh_5d_change,0,Percent change of on hand inventory over the past 5 days
+min_on_hand_change_5d,0,Minimum daily percent change to on hand inventory in the past 5 days
+days_below_ss,0,Number of days in the past month with on hand inventory less than safety stock amount
+fcst_3m,0,Expected quantity to be sold over the next 3 months
+fcst_daily,0,Expected quantity to be sold daily
+supplier_past_due_pct,0,Percent of PDC restocking orders from the supplier that haven't been shipped and are past due shipping
+ots_pct,0,Percent of orders with item_id that were shipped early or on time
+early_ratio,0,Percent of orders with item_id that were shipped earlier than estimated
+on_time_ratio,0,Percent of orders with item_id that were shipped on time
+no_ship_ratio,0,Percent of orders with item_id that weren't shipped on time
+dmd_rolling_90d,0,90 days rolling demand for item_id
+dmd_fcst_portion,0,demand vs forecasted stocking ratio. If > 1 demand is higher than forecasted demand
+orders_12m,0,Number of orders of item_id in 1 year
+dmd_wkly_95pct,0,95th percentile of weekly demand
+dmd_wkly_dos,0,Days on hand relative to the 95th percentile of weekly demand
+mdi_stockouts,0,Count of PACCAR Parts customers that have 0 on hand for item_id 
+network_avail,0,Percent of PACCAR Parts customer with item_id on hand
+ltm_median,0,Median lead time
+ltm_75pct,0,75th percentile lead time
+ltm_90pct,0,90th percentile lead time
+ltm_90pct_difference_wks,0,90th percentile lead time difference from stated lead time in weeks
+rhit_within_2wks,0,Regional Hit within 2 weeks from suggested date - Regional hit is a situation where a PDC is fully out of stock of item_id and needed emergency stocking to fulfill an order
+rhit_label,1,Regional Hit - Regional hit is a situation where a PDC is fully out of stock of item_id and needed emergency stocking to fulfill an order
